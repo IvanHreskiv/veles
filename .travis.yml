@@ -1,16 +1,15 @@
 language: node_js
-branches:
-  except:
-    - gh-pages
-stages:
-  - lint
-  - build
-jobs:
-  include:
-    - stage: lint
-      script:
-        # Run linter
-        - npm run lint
-    - stage: build
-      script:
-        - npm run build
+node_js:
+ - "node"
+
+cache: npm
+
+script: npm run build
+
+deploy:
+ provider: pages
+ skip_cleanup: true
+ github_token: $GITHUB_TOKEN
+ local_dir: dist
+ on:
+   branch: master
