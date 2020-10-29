@@ -1,4 +1,5 @@
 # veles
+[![Build Status](https://travis-ci.com/IvanHreskiv/veles.svg?branch=master)](https://travis-ci.com/IvanHreskiv/veles)
 
 ## Project setup
 ```
