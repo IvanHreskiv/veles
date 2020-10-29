@@ -1,0 +1,19 @@
+language: node_js
+install:
+  - npm install @vue/cli
+  - npm ci
+branches:
+  except:
+    - gh-pages
+stages:
+  - lint
+  - build
+jobs:
+  include:
+    - stage: lint
+      script:
+        # Run linter
+        - npm run lint
+    - stage: build
+      script:
+        - npm run build
